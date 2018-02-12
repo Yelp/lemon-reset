@@ -1,0 +1,48 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+.domtags--div, .domtags--span, .domtags--applet,
+.domtags--object, .domtags--iframe,
+.domtags--h1, .domtags--h2, .domtags--h3, .domtags--h4,
+.domtags--h5, .domtags--h6, .domtags--p, .domtags--blockquote, .domtags--pre, .domtags--a, .domtags--abbr, .domtags--acronym, .domtags--address, .domtags--big, .domtags--cite, .domtags--code,
+ .domtags--del, .domtags--dfn, .domtags--em, .domtags--img, .domtags--ins,
+ .domtags--kbd, .domtags--q, .domtags--s, .domtags--samp, .domtags--small,
+ .domtags--strike, .domtags--strong, .domtags--sub, .domtags--sup, .domtags--tt,
+ .domtags--var, .domtags--b, .domtags--u, .domtags--i, .domtags--center, .domtags--dl,
+ .domtags--dt, .domtags--dd, .domtags--ol, .domtags--ul, .domtags--li,
+ .domtags--fieldset, .domtags--form, .domtags--label, .domtags--legend,
+ .domtags--table, .domtags--caption, .domtags--tbody, .domtags--tfoot,
+ .domtags--thead, .domtags--tr, .domtags--th, .domtags--td, .domtags--article,
+ .domtags--aside, .domtags--canvas, .domtags--details, .domtags--embed,
+ .domtags--figure, .domtags--figcaption, .domtags--footer, .domtags--header,
+ .domtags--hgroup, .domtags--menu, .domtags--nav, .domtags--output, .domtags--ruby,
+ .domtags--section, .domtags--summary, .domtags--time, .domtags--mark,
+ .domtags--audio, .domtags--video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+.domtags--article, .domtags--aside, .domtags--details, .domtags--figcaption, .domtags--figure, .domtags--footer, .domtags--header, .domtags--hgroup, .domtags--menu, .domtags--nav, .domtags--section {
+    display: block;
+}
+.domtags--ol, .domtags--ul {
+    list-style: none;
+}
+.domtags--blockquote, .domtags--q {
+    quotes: none;
+}
+.domtags--blockquote:before,.domtags-- blockquote:after,
+.domtags--q:before, .domtags--q:after {
+    content: '';
+    content: none;
+}
+.domtags--table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

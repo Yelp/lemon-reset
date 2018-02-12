@@ -1,0 +1,7 @@
+coverage/
+lib/
+node_modules/
+npm-debug.log
+venv/
+yarn.lock
+yarn-error.log

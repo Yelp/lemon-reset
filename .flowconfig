@@ -1,0 +1,14 @@
+[ignore]
+# Ignore JSON files within testing directories in node_modules. These are
+# sometimes intentionally malformed for testing purposes and Flow will always
+# try to parse them. See https://github.com/facebook/flow/issues/2364.
+.*/node_modules/.*/test.*\.json$
+
+# Flow types are currently broken in jss
+# See https://github.com/cssinjs/jss/issues/411
+.*/node_modules/jss
+
+[options]
+# Flow doesn't understand CSS so we don't want to type-check it. Instead,
+# stub out any .css or .scss import with an empty JS object.
+module.name_mapper='^.+\.s?css$' -> 'empty/object'

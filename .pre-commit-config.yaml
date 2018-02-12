@@ -1,0 +1,23 @@
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    sha: v0.9.4
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-added-large-files
+    -   id: check-json
+    -   id: check-yaml
+-   repo: https://github.com/pre-commit/mirrors-eslint
+    sha: v4.6.0
+    hooks:
+    -   id: eslint
+        additional_dependencies:
+        -   eslint@4.15.0
+        -   eslint-config-airbnb@^15.1.0
+        -   eslint-config-prettier@^2.3.0
+        -   eslint-plugin-flowtype@^2.39.1
+        -   eslint-plugin-import@^2.8.0
+        -   eslint-plugin-jsx-a11y@^5.1.1
+        -   eslint-plugin-prettier@^2.5.0
+        -   eslint-plugin-react@^7.3.0
+        -   babel-eslint@^8.1.2
+        -   prettier@1.5.3
