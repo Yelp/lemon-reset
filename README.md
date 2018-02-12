@@ -10,7 +10,7 @@ yarn add lemon-reset
 ```
 
 ## Build
-Our makefile assumes that you have virtualenv available globally, as we use a python environment for running[pre-commit](https://pre-commit.com/). 
+Our makefile assumes that you have virtualenv available globally, as we use a python environment for running [pre-commit](https://pre-commit.com/). 
 
 If you have virtualenv, simple run:
 ```
@@ -21,6 +21,7 @@ Otherwise, you can do:
 ```
 NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files
 ```
+
 ## Usage
 Use these components as a drop in replacement for your existing HTML tags!
 
