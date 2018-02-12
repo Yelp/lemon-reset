@@ -13,19 +13,19 @@ yarn add lemon-reset
 Our makefile assumes that you have virtualenv available globally, as we use a python environment for running [pre-commit](https://pre-commit.com/). 
 
 If you have virtualenv, simple run:
-```
+```bash
 make build
 ```
 
 Otherwise, you can do:
-```
+```bash
 NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files
 ```
 
 ## Usage
 Use these components as a drop in replacement for your existing HTML tags!
 
-```
+```javascript
 import { P } from 'lemon-reset';
 
 ReactDOM.render(
@@ -35,7 +35,7 @@ ReactDOM.render(
 ```
 
 Wrap Lemon Reset components in your own custom components!
-```
+```javascript
 import { Span, Div } from 'lemon-reset';
 import styles from './Container.scss';
 
