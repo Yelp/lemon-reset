@@ -13,12 +13,8 @@ module.exports = {
     moduleNameMapper: {
         '^.+\\.(s?css)$': 'identity-obj-proxy',
     },
-    testMatch: ['<rootDir>/tests/**/*.test.js'],
-    transform: {
-        '^.+\\.js$': 'babel-jest',
-    },
+    snapshotSerializers: [require.resolve('enzyme-to-json/serializer')],
+    setupFiles: [require.resolve('./enzyme.setup')],
     // http://facebook.github.io/jest/docs/en/troubleshooting.html#watchman-issues
     watchman: false,
-    snapshotSerializers: [require.resolve('enzyme-to-json/serializer')],
-    setupFiles: [require.resolve('./enzyme.setup.js')],
 };

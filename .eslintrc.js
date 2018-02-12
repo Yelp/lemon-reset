@@ -1,10 +1,3 @@
-const prettierConfig  = {
-    printWidth: 120,
-    singleQuote: true,
-    tabWidth: 4,
-    trailingComma: 'all',
-};
-
 module.exports = {
     extends: ['airbnb', 'plugin:flowtype/recommended', 'prettier', 'prettier/flowtype', 'prettier/react'],
 
@@ -13,7 +6,12 @@ module.exports = {
     plugins: ['flowtype', 'prettier'],
 
     rules: {
-        'prettier/prettier': ['error', prettierConfig],
+        'prettier/prettier': ['error', {
+            printWidth: 120,
+            singleQuote: true,
+            tabWidth: 4,
+            trailingComma: 'all',
+        }],
 
         // https://github.com/airbnb/javascript/pull/985#issuecomment-239145468
         'react/jsx-filename-extension': 'off',
@@ -33,7 +31,7 @@ module.exports = {
 
     overrides: [
         {
-            files: ['tests/**/*.js', '**/__tests__/**/*.test.js'],
+            files: ['tests/**/*.js'],
             env: {
                 jest: true,
             },
