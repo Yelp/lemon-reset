@@ -23,10 +23,19 @@
     "enzyme": "^3.1.1",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.43.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.4.0",
     "flow-bin": "^0.61.0",
     "flow-copy-source": "^1.2.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^22.0.4"
+    "jest": "^22.0.4",
+    "prettier": "^1.10.2"
   },
   "files": [
     "lib",
