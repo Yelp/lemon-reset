@@ -10,7 +10,7 @@ yarn add lemon-reset
 ```
 
 ## Build
-Our makefile assumes that you have virtualenv available globally, as we use a python environment for running [pre-commit](https://pre-commit.com/). 
+Our makefile assumes that you have virtualenv available globally, as we use a python environment for running [pre-commit](https://pre-commit.com/).
 
 If you have virtualenv, simply run:
 ```bash
@@ -46,7 +46,7 @@ type Props = {
 const Container = ({children, display}: Props) {
     const Tag = display === 'inline' ? Span : Div;
     const classes = styles[`display--${display}`]
-    
+
     return (
         <Tag className={styles[`display--${display}`]}
             { children }
