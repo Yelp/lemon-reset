@@ -1,4 +1,4 @@
-# Lemon Reset
+# 🍋 Lemon Reset 
 A set of React components that provide [Meyer Reset](https://meyerweb.com/eric/tools/css/reset/) styles for use with [CSS Modules](https://github.com/css-modules/css-modules).
 
 For all the DOM tags used in Meyer Reset, Lemon Reset provides a React component with those reset styles, minimizing the effect of browser quirks.
