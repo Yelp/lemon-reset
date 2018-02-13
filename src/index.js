@@ -1,2 +1,2 @@
 // @flow
-export * from './components/DomTags';
+export * from './components/LemonReset';

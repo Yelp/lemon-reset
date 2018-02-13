@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DomTags passes a snapshot test 1`] = `
+exports[`Lemon passes a snapshot test 1`] = `
 <DomTags
   className=""
   tag="div"

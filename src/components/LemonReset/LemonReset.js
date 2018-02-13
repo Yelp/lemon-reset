@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
-import styles from './DomTags.scss';
+import styles from './LemonReset.scss';
 
 type DomTagsType =
     | 'a'
@@ -95,7 +95,7 @@ type Props = {
 };
 
 export const DomTags = ({ tag: Tag, children, className, tagRef, ...otherProps }: Props) => (
-    <Tag className={classNames(styles[`domtags--${Tag}`], className)} ref={tagRef} {...otherProps}>
+    <Tag className={classNames(styles[`lemon--${Tag}`], className)} ref={tagRef} {...otherProps}>
         {children}
     </Tag>
 );
