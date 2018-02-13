@@ -56,3 +56,10 @@ const Container = ({children, display}: Props) {
 
 export default Container;
 ```
+
+Pass in any props! If you need to [pass in a ref](https://reactjs.org/docs/refs-and-the-dom.html#adding-a-ref-to-a-dom-element), you'll need to pass it in as a tagRef:
+```javascript
+<Span tagRef={span => console.log(span)}>
+    This has a ref
+</Span>
+```
