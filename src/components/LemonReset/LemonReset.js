@@ -4,7 +4,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styles from './LemonReset.scss';
 
-type DomTagsType =
+type LemonResetType =
     | 'a'
     | 'abbr'
     | 'acronym'
@@ -88,19 +88,19 @@ type DomTagsType =
     | 'video';
 
 type Props = {
-    tag: DomTagsType,
+    tag: LemonResetType,
     children?: React.Node,
     className?: string,
     tagRef?: ?React.Ref<*>,
 };
 
-export const DomTags = ({ tag: Tag, children, className, tagRef, ...otherProps }: Props) => (
+export const LemonReset = ({ tag: Tag, children, className, tagRef, ...otherProps }: Props) => (
     <Tag className={classNames(styles[`lemon--${Tag}`], className)} ref={tagRef} {...otherProps}>
         {children}
     </Tag>
 );
 
-DomTags.defaultProps = {
+LemonReset.defaultProps = {
     children: null,
     className: '',
     tagRef: null,
@@ -111,7 +111,7 @@ type NoChildTagProps = {
 };
 
 export const Embed = ({ className, ...otherProps }: NoChildTagProps) => (
-    <DomTags tag="embed" className={className} {...otherProps} />
+    <LemonReset tag="embed" className={className} {...otherProps} />
 );
 
 Embed.defaultProps = {
@@ -119,7 +119,7 @@ Embed.defaultProps = {
 };
 
 export const Img = ({ className, ...otherProps }: NoChildTagProps) => (
-    <DomTags tag="img" className={className} {...otherProps} />
+    <LemonReset tag="img" className={className} {...otherProps} />
 );
 
 Img.defaultProps = {
@@ -132,9 +132,9 @@ type TagProps = {
 };
 
 export const A = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="a" className={className} {...otherProps}>
+    <LemonReset tag="a" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 A.defaultProps = {
@@ -143,9 +143,9 @@ A.defaultProps = {
 };
 
 export const Abbr = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="abbr" className={className} {...otherProps}>
+    <LemonReset tag="abbr" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Abbr.defaultProps = {
@@ -154,9 +154,9 @@ Abbr.defaultProps = {
 };
 
 export const Acronym = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="acronym" className={className} {...otherProps}>
+    <LemonReset tag="acronym" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Acronym.defaultProps = {
@@ -165,9 +165,9 @@ Acronym.defaultProps = {
 };
 
 export const Address = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="address" className={className} {...otherProps}>
+    <LemonReset tag="address" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Address.defaultProps = {
@@ -176,9 +176,9 @@ Address.defaultProps = {
 };
 
 export const Applet = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="applet" className={className} {...otherProps}>
+    <LemonReset tag="applet" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Applet.defaultProps = {
@@ -187,9 +187,9 @@ Applet.defaultProps = {
 };
 
 export const Article = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="article" className={className} {...otherProps}>
+    <LemonReset tag="article" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Article.defaultProps = {
@@ -198,9 +198,9 @@ Article.defaultProps = {
 };
 
 export const Aside = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="aside" className={className} {...otherProps}>
+    <LemonReset tag="aside" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Aside.defaultProps = {
@@ -209,9 +209,9 @@ Aside.defaultProps = {
 };
 
 export const Audio = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="audio" className={className} {...otherProps}>
+    <LemonReset tag="audio" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Audio.defaultProps = {
@@ -220,9 +220,9 @@ Audio.defaultProps = {
 };
 
 export const B = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="b" className={className} {...otherProps}>
+    <LemonReset tag="b" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 B.defaultProps = {
@@ -231,9 +231,9 @@ B.defaultProps = {
 };
 
 export const Big = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="big" className={className} {...otherProps}>
+    <LemonReset tag="big" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Big.defaultProps = {
@@ -242,9 +242,9 @@ Big.defaultProps = {
 };
 
 export const Blockquote = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="blockquote" className={className} {...otherProps}>
+    <LemonReset tag="blockquote" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Blockquote.defaultProps = {
@@ -253,9 +253,9 @@ Blockquote.defaultProps = {
 };
 
 export const Canvas = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="canvas" className={className} {...otherProps}>
+    <LemonReset tag="canvas" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Canvas.defaultProps = {
@@ -264,9 +264,9 @@ Canvas.defaultProps = {
 };
 
 export const Caption = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="caption" className={className} {...otherProps}>
+    <LemonReset tag="caption" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Caption.defaultProps = {
@@ -275,9 +275,9 @@ Caption.defaultProps = {
 };
 
 export const Center = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="center" className={className} {...otherProps}>
+    <LemonReset tag="center" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Center.defaultProps = {
@@ -286,9 +286,9 @@ Center.defaultProps = {
 };
 
 export const Cite = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="cite" className={className} {...otherProps}>
+    <LemonReset tag="cite" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Cite.defaultProps = {
@@ -297,9 +297,9 @@ Cite.defaultProps = {
 };
 
 export const Code = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="code" className={className} {...otherProps}>
+    <LemonReset tag="code" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Code.defaultProps = {
@@ -308,9 +308,9 @@ Code.defaultProps = {
 };
 
 export const Dd = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="dd" className={className} {...otherProps}>
+    <LemonReset tag="dd" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Dd.defaultProps = {
@@ -319,9 +319,9 @@ Dd.defaultProps = {
 };
 
 export const Del = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="del" className={className} {...otherProps}>
+    <LemonReset tag="del" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Del.defaultProps = {
@@ -330,9 +330,9 @@ Del.defaultProps = {
 };
 
 export const Details = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="details" className={className} {...otherProps}>
+    <LemonReset tag="details" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Details.defaultProps = {
@@ -341,9 +341,9 @@ Details.defaultProps = {
 };
 
 export const Dfn = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="dfn" className={className} {...otherProps}>
+    <LemonReset tag="dfn" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Dfn.defaultProps = {
@@ -352,9 +352,9 @@ Dfn.defaultProps = {
 };
 
 export const Div = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="div" className={className} {...otherProps}>
+    <LemonReset tag="div" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Div.defaultProps = {
@@ -363,9 +363,9 @@ Div.defaultProps = {
 };
 
 export const Dl = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="dl" className={className} {...otherProps}>
+    <LemonReset tag="dl" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Dl.defaultProps = {
@@ -374,9 +374,9 @@ Dl.defaultProps = {
 };
 
 export const DomObject = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="object" className={className} {...otherProps}>
+    <LemonReset tag="object" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 DomObject.defaultProps = {
@@ -385,9 +385,9 @@ DomObject.defaultProps = {
 };
 
 export const Dt = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="dt" className={className} {...otherProps}>
+    <LemonReset tag="dt" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Dt.defaultProps = {
@@ -396,9 +396,9 @@ Dt.defaultProps = {
 };
 
 export const Em = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="em" className={className} {...otherProps}>
+    <LemonReset tag="em" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Em.defaultProps = {
@@ -407,9 +407,9 @@ Em.defaultProps = {
 };
 
 export const Fieldset = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="fieldset" className={className} {...otherProps}>
+    <LemonReset tag="fieldset" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Fieldset.defaultProps = {
@@ -418,9 +418,9 @@ Fieldset.defaultProps = {
 };
 
 export const Figcaption = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="figcaption" className={className} {...otherProps}>
+    <LemonReset tag="figcaption" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Figcaption.defaultProps = {
@@ -429,9 +429,9 @@ Figcaption.defaultProps = {
 };
 
 export const Figure = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="figure" className={className} {...otherProps}>
+    <LemonReset tag="figure" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Figure.defaultProps = {
@@ -440,9 +440,9 @@ Figure.defaultProps = {
 };
 
 export const Footer = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="footer" className={className} {...otherProps}>
+    <LemonReset tag="footer" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Footer.defaultProps = {
@@ -451,9 +451,9 @@ Footer.defaultProps = {
 };
 
 export const Form = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="form" className={className} {...otherProps}>
+    <LemonReset tag="form" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Form.defaultProps = {
@@ -462,9 +462,9 @@ Form.defaultProps = {
 };
 
 export const H1 = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="h1" className={className} {...otherProps}>
+    <LemonReset tag="h1" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 H1.defaultProps = {
@@ -473,9 +473,9 @@ H1.defaultProps = {
 };
 
 export const H2 = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="h2" className={className} {...otherProps}>
+    <LemonReset tag="h2" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 H2.defaultProps = {
@@ -484,9 +484,9 @@ H2.defaultProps = {
 };
 
 export const H3 = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="h3" className={className} {...otherProps}>
+    <LemonReset tag="h3" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 H3.defaultProps = {
@@ -495,9 +495,9 @@ H3.defaultProps = {
 };
 
 export const H4 = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="h4" className={className} {...otherProps}>
+    <LemonReset tag="h4" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 H4.defaultProps = {
@@ -506,9 +506,9 @@ H4.defaultProps = {
 };
 
 export const H5 = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="h5" className={className} {...otherProps}>
+    <LemonReset tag="h5" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 H5.defaultProps = {
@@ -517,9 +517,9 @@ H5.defaultProps = {
 };
 
 export const H6 = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="h6" className={className} {...otherProps}>
+    <LemonReset tag="h6" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 H6.defaultProps = {
@@ -528,9 +528,9 @@ H6.defaultProps = {
 };
 
 export const Header = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="header" className={className} {...otherProps}>
+    <LemonReset tag="header" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Header.defaultProps = {
@@ -539,9 +539,9 @@ Header.defaultProps = {
 };
 
 export const Hgroup = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="hgroup" className={className} {...otherProps}>
+    <LemonReset tag="hgroup" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Hgroup.defaultProps = {
@@ -550,9 +550,9 @@ Hgroup.defaultProps = {
 };
 
 export const I = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="i" className={className} {...otherProps}>
+    <LemonReset tag="i" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 I.defaultProps = {
@@ -561,9 +561,9 @@ I.defaultProps = {
 };
 
 export const Iframe = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="iframe" className={className} {...otherProps}>
+    <LemonReset tag="iframe" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Iframe.defaultProps = {
@@ -572,9 +572,9 @@ Iframe.defaultProps = {
 };
 
 export const Ins = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="ins" className={className} {...otherProps}>
+    <LemonReset tag="ins" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Ins.defaultProps = {
@@ -583,9 +583,9 @@ Ins.defaultProps = {
 };
 
 export const Kbd = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="kbd" className={className} {...otherProps}>
+    <LemonReset tag="kbd" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Kbd.defaultProps = {
@@ -594,9 +594,9 @@ Kbd.defaultProps = {
 };
 
 export const Label = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="label" className={className} {...otherProps}>
+    <LemonReset tag="label" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Label.defaultProps = {
@@ -605,9 +605,9 @@ Label.defaultProps = {
 };
 
 export const Legend = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="legend" className={className} {...otherProps}>
+    <LemonReset tag="legend" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Legend.defaultProps = {
@@ -616,9 +616,9 @@ Legend.defaultProps = {
 };
 
 export const Li = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="li" className={className} {...otherProps}>
+    <LemonReset tag="li" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Li.defaultProps = {
@@ -627,9 +627,9 @@ Li.defaultProps = {
 };
 
 export const Mark = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="mark" className={className} {...otherProps}>
+    <LemonReset tag="mark" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Mark.defaultProps = {
@@ -638,9 +638,9 @@ Mark.defaultProps = {
 };
 
 export const Menu = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="menu" className={className} {...otherProps}>
+    <LemonReset tag="menu" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Menu.defaultProps = {
@@ -649,9 +649,9 @@ Menu.defaultProps = {
 };
 
 export const Nav = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="nav" className={className} {...otherProps}>
+    <LemonReset tag="nav" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Nav.defaultProps = {
@@ -660,9 +660,9 @@ Nav.defaultProps = {
 };
 
 export const Ol = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="ol" className={className} {...otherProps}>
+    <LemonReset tag="ol" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Ol.defaultProps = {
@@ -671,9 +671,9 @@ Ol.defaultProps = {
 };
 
 export const Output = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="output" className={className} {...otherProps}>
+    <LemonReset tag="output" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Output.defaultProps = {
@@ -682,9 +682,9 @@ Output.defaultProps = {
 };
 
 export const P = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="p" className={className} {...otherProps}>
+    <LemonReset tag="p" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 P.defaultProps = {
@@ -693,9 +693,9 @@ P.defaultProps = {
 };
 
 export const Pre = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="pre" className={className} {...otherProps}>
+    <LemonReset tag="pre" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Pre.defaultProps = {
@@ -704,9 +704,9 @@ Pre.defaultProps = {
 };
 
 export const Q = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="q" className={className} {...otherProps}>
+    <LemonReset tag="q" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Q.defaultProps = {
@@ -715,9 +715,9 @@ Q.defaultProps = {
 };
 
 export const Ruby = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="ruby" className={className} {...otherProps}>
+    <LemonReset tag="ruby" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Ruby.defaultProps = {
@@ -726,9 +726,9 @@ Ruby.defaultProps = {
 };
 
 export const S = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="s" className={className} {...otherProps}>
+    <LemonReset tag="s" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 S.defaultProps = {
@@ -737,9 +737,9 @@ S.defaultProps = {
 };
 
 export const Samp = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="samp" className={className} {...otherProps}>
+    <LemonReset tag="samp" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Samp.defaultProps = {
@@ -748,9 +748,9 @@ Samp.defaultProps = {
 };
 
 export const Section = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="section" className={className} {...otherProps}>
+    <LemonReset tag="section" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Section.defaultProps = {
@@ -759,9 +759,9 @@ Section.defaultProps = {
 };
 
 export const Small = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="small" className={className} {...otherProps}>
+    <LemonReset tag="small" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Small.defaultProps = {
@@ -770,9 +770,9 @@ Small.defaultProps = {
 };
 
 export const Span = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="span" className={className} {...otherProps}>
+    <LemonReset tag="span" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Span.defaultProps = {
@@ -781,9 +781,9 @@ Span.defaultProps = {
 };
 
 export const Strike = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="strike" className={className} {...otherProps}>
+    <LemonReset tag="strike" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Strike.defaultProps = {
@@ -792,9 +792,9 @@ Strike.defaultProps = {
 };
 
 export const Strong = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="strong" className={className} {...otherProps}>
+    <LemonReset tag="strong" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Strong.defaultProps = {
@@ -803,9 +803,9 @@ Strong.defaultProps = {
 };
 
 export const Sub = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="sub" className={className} {...otherProps}>
+    <LemonReset tag="sub" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Sub.defaultProps = {
@@ -814,9 +814,9 @@ Sub.defaultProps = {
 };
 
 export const Summary = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="summary" className={className} {...otherProps}>
+    <LemonReset tag="summary" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Summary.defaultProps = {
@@ -825,9 +825,9 @@ Summary.defaultProps = {
 };
 
 export const Sup = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="sup" className={className} {...otherProps}>
+    <LemonReset tag="sup" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Sup.defaultProps = {
@@ -836,9 +836,9 @@ Sup.defaultProps = {
 };
 
 export const Table = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="table" className={className} {...otherProps}>
+    <LemonReset tag="table" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Table.defaultProps = {
@@ -847,9 +847,9 @@ Table.defaultProps = {
 };
 
 export const Tbody = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="tbody" className={className} {...otherProps}>
+    <LemonReset tag="tbody" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Tbody.defaultProps = {
@@ -858,9 +858,9 @@ Tbody.defaultProps = {
 };
 
 export const Td = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="td" className={className} {...otherProps}>
+    <LemonReset tag="td" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Td.defaultProps = {
@@ -869,9 +869,9 @@ Td.defaultProps = {
 };
 
 export const Tfoot = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="tfoot" className={className} {...otherProps}>
+    <LemonReset tag="tfoot" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Tfoot.defaultProps = {
@@ -880,9 +880,9 @@ Tfoot.defaultProps = {
 };
 
 export const Th = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="th" className={className} {...otherProps}>
+    <LemonReset tag="th" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Th.defaultProps = {
@@ -891,9 +891,9 @@ Th.defaultProps = {
 };
 
 export const Thead = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="thead" className={className} {...otherProps}>
+    <LemonReset tag="thead" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Thead.defaultProps = {
@@ -902,9 +902,9 @@ Thead.defaultProps = {
 };
 
 export const Time = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="time" className={className} {...otherProps}>
+    <LemonReset tag="time" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Time.defaultProps = {
@@ -913,9 +913,9 @@ Time.defaultProps = {
 };
 
 export const Tr = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="tr" className={className} {...otherProps}>
+    <LemonReset tag="tr" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Tr.defaultProps = {
@@ -924,9 +924,9 @@ Tr.defaultProps = {
 };
 
 export const Tt = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="tt" className={className} {...otherProps}>
+    <LemonReset tag="tt" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Tt.defaultProps = {
@@ -935,9 +935,9 @@ Tt.defaultProps = {
 };
 
 export const U = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="u" className={className} {...otherProps}>
+    <LemonReset tag="u" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 U.defaultProps = {
@@ -946,9 +946,9 @@ U.defaultProps = {
 };
 
 export const Ul = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="ul" className={className} {...otherProps}>
+    <LemonReset tag="ul" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Ul.defaultProps = {
@@ -957,9 +957,9 @@ Ul.defaultProps = {
 };
 
 export const Var = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="var" className={className} {...otherProps}>
+    <LemonReset tag="var" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Var.defaultProps = {
@@ -968,9 +968,9 @@ Var.defaultProps = {
 };
 
 export const Video = ({ children, className, ...otherProps }: TagProps) => (
-    <DomTags tag="video" className={className} {...otherProps}>
+    <LemonReset tag="video" className={className} {...otherProps}>
         {children}
-    </DomTags>
+    </LemonReset>
 );
 
 Video.defaultProps = {
