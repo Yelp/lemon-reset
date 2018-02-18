@@ -1,11 +1,19 @@
+repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    sha: v0.9.4
+    sha: v1.2.0
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
     -   id: check-added-large-files
     -   id: check-json
     -   id: check-yaml
+-   repo: https://github.com/prettier/prettier
+    sha: 1.10.2
+    hooks:
+    -   id: prettier
+        name: prettier (README.md)
+        files: ^README\.md$
+        args: ['--tab-width=4']
 -   repo: local
     hooks:
     -   id: eslint
