@@ -11,9 +11,10 @@ repos:
     sha: 1.10.2
     hooks:
     -   id: prettier
-        name: prettier (README.md)
-        files: ^README\.md$
-        args: ['--tab-width=4']
+        name: prettier
+        # Prettier runs on JavaScript as part of eslint
+        exclude_types: [javascript]
+        exclude: ^package\.json
 -   repo: local
     hooks:
     -   id: eslint

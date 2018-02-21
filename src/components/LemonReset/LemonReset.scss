@@ -3,23 +3,85 @@
    License: none (public domain)
 */
 
-.lemon--div, .lemon--span, .lemon--applet,
-.lemon--object, .lemon--iframe,
-.lemon--h1, .lemon--h2, .lemon--h3, .lemon--h4,
-.lemon--h5, .lemon--h6, .lemon--p, .lemon--blockquote, .lemon--pre, .lemon--a, .lemon--abbr, .lemon--acronym, .lemon--address, .lemon--big, .lemon--cite, .lemon--code,
- .lemon--del, .lemon--dfn, .lemon--em, .lemon--img, .lemon--ins,
- .lemon--kbd, .lemon--q, .lemon--s, .lemon--samp, .lemon--small,
- .lemon--strike, .lemon--strong, .lemon--sub, .lemon--sup, .lemon--tt,
- .lemon--var, .lemon--b, .lemon--u, .lemon--i, .lemon--center, .lemon--dl,
- .lemon--dt, .lemon--dd, .lemon--ol, .lemon--ul, .lemon--li,
- .lemon--fieldset, .lemon--form, .lemon--label, .lemon--legend,
- .lemon--table, .lemon--caption, .lemon--tbody, .lemon--tfoot,
- .lemon--thead, .lemon--tr, .lemon--th, .lemon--td, .lemon--article,
- .lemon--aside, .lemon--canvas, .lemon--details, .lemon--embed,
- .lemon--figure, .lemon--figcaption, .lemon--footer, .lemon--header,
- .lemon--hgroup, .lemon--menu, .lemon--nav, .lemon--output, .lemon--ruby,
- .lemon--section, .lemon--summary, .lemon--time, .lemon--mark,
- .lemon--audio, .lemon--video {
+.lemon--div,
+.lemon--span,
+.lemon--applet,
+.lemon--object,
+.lemon--iframe,
+.lemon--h1,
+.lemon--h2,
+.lemon--h3,
+.lemon--h4,
+.lemon--h5,
+.lemon--h6,
+.lemon--p,
+.lemon--blockquote,
+.lemon--pre,
+.lemon--a,
+.lemon--abbr,
+.lemon--acronym,
+.lemon--address,
+.lemon--big,
+.lemon--cite,
+.lemon--code,
+.lemon--del,
+.lemon--dfn,
+.lemon--em,
+.lemon--img,
+.lemon--ins,
+.lemon--kbd,
+.lemon--q,
+.lemon--s,
+.lemon--samp,
+.lemon--small,
+.lemon--strike,
+.lemon--strong,
+.lemon--sub,
+.lemon--sup,
+.lemon--tt,
+.lemon--var,
+.lemon--b,
+.lemon--u,
+.lemon--i,
+.lemon--center,
+.lemon--dl,
+.lemon--dt,
+.lemon--dd,
+.lemon--ol,
+.lemon--ul,
+.lemon--li,
+.lemon--fieldset,
+.lemon--form,
+.lemon--label,
+.lemon--legend,
+.lemon--table,
+.lemon--caption,
+.lemon--tbody,
+.lemon--tfoot,
+.lemon--thead,
+.lemon--tr,
+.lemon--th,
+.lemon--td,
+.lemon--article,
+.lemon--aside,
+.lemon--canvas,
+.lemon--details,
+.lemon--embed,
+.lemon--figure,
+.lemon--figcaption,
+.lemon--footer,
+.lemon--header,
+.lemon--hgroup,
+.lemon--menu,
+.lemon--nav,
+.lemon--output,
+.lemon--ruby,
+.lemon--section,
+.lemon--summary,
+.lemon--time,
+.lemon--mark,
+.lemon--audio,
+.lemon--video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -28,17 +90,31 @@
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-.lemon--article, .lemon--aside, .lemon--details, .lemon--figcaption, .lemon--figure, .lemon--footer, .lemon--header, .lemon--hgroup, .lemon--menu, .lemon--nav, .lemon--section {
+.lemon--article,
+.lemon--aside,
+.lemon--details,
+.lemon--figcaption,
+.lemon--figure,
+.lemon--footer,
+.lemon--header,
+.lemon--hgroup,
+.lemon--menu,
+.lemon--nav,
+.lemon--section {
     display: block;
 }
-.lemon--ol, .lemon--ul {
+.lemon--ol,
+.lemon--ul {
     list-style: none;
 }
-.lemon--blockquote, .lemon--q {
+.lemon--blockquote,
+.lemon--q {
     quotes: none;
 }
-.lemon--blockquote:before, .lemon--blockquote:after,
-.lemon--q:before, .lemon--q:after {
+.lemon--blockquote:before,
+.lemon--blockquote:after,
+.lemon--q:before,
+.lemon--q:after {
     content: '';
     content: none;
 }
