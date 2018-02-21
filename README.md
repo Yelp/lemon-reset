@@ -1,6 +1,6 @@
 # 🍋 Lemon Reset
 
-[![Build Status](https://travis-ci.org/Yelp/lemon-reset.svg?branch=master)](https://travis-ci.org/Yelp/lemon-reset)
+[![npm](https://img.shields.io/npm/v/lemon-reset.svg)](https://yarn.pm/lemon-reset) [![Build Status](https://travis-ci.org/Yelp/lemon-reset.svg?branch=master)](https://travis-ci.org/Yelp/lemon-reset)
 
 A set of React components that provide [Meyer Reset](https://meyerweb.com/eric/tools/css/reset/) styles for use with [CSS Modules](https://github.com/css-modules/css-modules).
 
