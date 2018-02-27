@@ -34,7 +34,7 @@ NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files
 Use these components as a drop in replacement for your existing HTML tags!
 
 ```javascript
-import { P } from "lemon-reset";
+import { P } from 'lemon-reset';
 
 ReactDOM.render(<P>Hello World</P>, myContainer);
 ```
@@ -42,15 +42,15 @@ ReactDOM.render(<P>Hello World</P>, myContainer);
 Wrap Lemon Reset components in your own custom components!
 
 ```javascript
-import { Span, Div } from "lemon-reset";
-import styles from "./Container.scss";
+import { Span, Div } from 'lemon-reset';
+import styles from './Container.scss';
 
 type Props = {
-    display: "inline" | "inline-block" | "block" | "none"
+    display: 'inline' | 'inline-block' | 'block' | 'none',
 };
 
 const Container = ({ children, display }: Props) => {
-    const Tag = display === "inline" ? Span : Div;
+    const Tag = display === 'inline' ? Span : Div;
     const classes = styles[`display--${display}`];
 
     return <Tag className={styles[`display--${display}`]}>{children}</Tag>;

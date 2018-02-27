@@ -6,15 +6,7 @@ module.exports = {
     plugins: ['flowtype', 'prettier'],
 
     rules: {
-        'prettier/prettier': [
-            'error',
-            {
-                printWidth: 120,
-                singleQuote: true,
-                tabWidth: 4,
-                trailingComma: 'all',
-            },
-        ],
+        'prettier/prettier': 'error',
 
         // https://github.com/airbnb/javascript/pull/985#issuecomment-239145468
         'react/jsx-filename-extension': 'off',
