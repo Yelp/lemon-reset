@@ -13,22 +13,6 @@ In a React world, we prefer components that are self-contained and not reliant o
 yarn add lemon-reset
 ```
 
-## Build
-
-Our makefile assumes that you have virtualenv available globally, as we use a python environment for running [pre-commit](https://pre-commit.com/).
-
-If you have virtualenv, simply run:
-
-```bash
-make build
-```
-
-Otherwise, you can do:
-
-```bash
-NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files
-```
-
 ## Usage
 
 Use these components as a drop in replacement for your existing HTML tags!
@@ -63,4 +47,20 @@ Pass in any props! If you need to [pass in a ref](https://reactjs.org/docs/refs-
 
 ```javascript
 <Span tagRef={span => console.log(span)}>This has a ref</Span>
+```
+
+## Build
+
+Our makefile assumes that you have virtualenv available globally, as we use a python environment for running [pre-commit](https://pre-commit.com/).
+
+If you have virtualenv, simply run:
+
+```bash
+make build
+```
+
+Otherwise, you can do:
+
+```bash
+NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files
 ```
