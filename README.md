@@ -7,6 +7,8 @@ A set of React components that provide [Meyer Reset](https://meyerweb.com/eric/t
 For all the DOM tags used in Meyer Reset, Lemon Reset provides a React component with those reset styles, minimizing the effect of browser quirks.
 In a React world, we prefer components that are self-contained and not reliant on global styling.
 
+Read more about the motivation behind lemon-reset [in our blog post](https://engineeringblog.yelp.com/2018/03/css-in-the-age-of-react.html)!
+
 ## Installation
 
 ```
