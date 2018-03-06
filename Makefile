@@ -21,6 +21,13 @@ venv: Makefile requirements-dev.txt
 node_modules: package.json
 	yarn
 
+.PHONY: gen
+gen: node_modules
+	curl https://meyerweb.com/eric/tools/css/reset/reset.css | \
+		python gencss.py | \
+		node_modules/.bin/prettier --stdin --stdin-filepath=x.scss > \
+		src/components/LemonReset/LemonReset.scss
+
 .PHONY: clean
 clean:
 	rm -rf coverage
