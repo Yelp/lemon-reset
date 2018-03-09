@@ -39,7 +39,7 @@ const Container = ({ children, display }: Props) => {
     const Tag = display === 'inline' ? Span : Div;
     const classes = styles[`display--${display}`];
 
-    return <Tag className={styles[`display--${display}`]}>{children}</Tag>;
+    return <Tag className={classes}>{children}</Tag>;
 };
 
 export default Container;
