@@ -3,8 +3,8 @@ all: test
 
 .PHONY: build
 build: node_modules
-	NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files
-	./node_modules/.bin/flow-copy-source src lib
+	NODE_ENV=production yarn babel src --out-dir lib --copy-files
+	yarn flow-copy-source src lib
 
 .PHONY: test
 test: venv node_modules
@@ -24,9 +24,8 @@ node_modules: package.json
 .PHONY: gen
 gen: node_modules
 	curl https://meyerweb.com/eric/tools/css/reset/reset.css | \
-		python gencss.py | \
-		node_modules/.bin/prettier --stdin --stdin-filepath=x.scss > \
-		src/components/LemonReset/LemonReset.scss
+		python patch_meyer_reset.py > \
+		src/components/LemonReset/LemonReset.css
 
 .PHONY: clean
 clean:
