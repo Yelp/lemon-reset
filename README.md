@@ -29,7 +29,7 @@ Wrap Lemon Reset components in your own custom components!
 
 ```javascript
 import { Span, Div } from 'lemon-reset';
-import styles from './Container.scss';
+import styles from './Container.css';
 
 type Props = {
     display: 'inline' | 'inline-block' | 'block' | 'none',
@@ -64,5 +64,5 @@ make build
 Otherwise, you can do:
 
 ```bash
-NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files
+NODE_ENV=production yarn babel src --out-dir lib --copy-files
 ```

@@ -1,4 +1,4 @@
-"""Pass a reset css as stdin to be rewritten"""
+"""Add '.lemon--' prefixes to meyer reset styles."""
 import re
 import sys
 
@@ -10,14 +10,7 @@ def _replace(s, to_remove):
 
 def main():
     contents = sys.stdin.read()
-    # don't style body / html
-    contents = _replace(contents, 'html, body, ')
-    contents = _replace(contents, 'body {\n\tline-height: 1;\n}\n')
-    # meyer-reset has trailing whitespace :'(
-    contents = contents.replace(' \n', '\n')
-    # replace with our classname
     contents = re.sub('([a-z0-9:]+(,| {))', r'.lemon--\1', contents)
-
     sys.stdout.write(contents)
 
 

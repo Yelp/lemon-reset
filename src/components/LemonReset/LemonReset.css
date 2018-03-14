@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+.lemon--html,
+.lemon--body,
 .lemon--div,
 .lemon--span,
 .lemon--applet,
@@ -102,6 +104,9 @@
 .lemon--nav,
 .lemon--section {
     display: block;
+}
+.lemon--body {
+    line-height: 1;
 }
 .lemon--ol,
 .lemon--ul {
