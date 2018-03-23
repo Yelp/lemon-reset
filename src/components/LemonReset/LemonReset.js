@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
-import styles from './LemonReset.css';
+import styles from '../../../lib/components/LemonReset/LemonReset.css';
 
 type LemonResetType =
     | 'a'

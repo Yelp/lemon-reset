@@ -5,6 +5,7 @@ all: test
 build: node_modules
 	NODE_ENV=production yarn babel src --out-dir lib --copy-files
 	yarn flow-copy-source src lib
+	./patch-meyer-reset.js
 
 .PHONY: test
 test: venv node_modules
@@ -20,12 +21,6 @@ venv: Makefile requirements-dev.txt
 
 node_modules: package.json
 	yarn
-
-.PHONY: gen
-gen: node_modules
-	curl https://meyerweb.com/eric/tools/css/reset/reset.css | \
-		python patch_meyer_reset.py > \
-		src/components/LemonReset/LemonReset.css
 
 .PHONY: clean
 clean:
