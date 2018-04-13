@@ -5,6 +5,7 @@
   "repository": "https://github.com/Yelp/lemon-reset",
   "description": "Provides a React component with Meyer Reset styles for every element in Meyer Reset. For use with css-modules.",
   "main": "./lib/index.js",
+  "module": "./es/index.js",
   "scripts": {
     "test": "jest",
     "prepublish": "make build",
@@ -17,6 +18,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.1.2",
     "babel-jest": "^22.2.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-react-app": "^3.0.1",
     "empty": "^0.10.1",
     "enzyme": "^3.1.1",
@@ -43,6 +45,7 @@
     "react": "15.x || 16.x"
   },
   "files": [
+    "es",
     "lib",
     "src"
   ]
