@@ -3,8 +3,10 @@ all: test
 
 .PHONY: build
 build: node_modules
-	NODE_ENV=production yarn babel src --out-dir lib --copy-files
+	NODE_ENV=production yarn babel src --out-dir es
+	NODE_ENV=production yarn babel src --plugins=transform-es2015-modules-commonjs --out-dir lib
 	yarn flow-copy-source src lib
+	yarn flow-copy-source src es
 	./patch-meyer-reset.js
 
 .PHONY: test
@@ -26,5 +28,6 @@ node_modules: package.json
 clean:
 	rm -rf coverage
 	rm -rf lib
+	rm -rf es
 	rm -rf node_modules
 	rm -rf venv
