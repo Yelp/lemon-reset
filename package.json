@@ -17,7 +17,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.1.2",
-    "babel-jest": "^22.2.2",
+    "babel-jest": "^23.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-react-app": "^3.0.1",
     "empty": "^0.10.1",
