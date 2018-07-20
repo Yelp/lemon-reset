@@ -23,3 +23,9 @@ repos:
         language: system
         files: \.js$
         args: ['--fix', '--ignore-pattern=!.eslintrc.js']
+-   repo: https://github.com/Yelp/detect-secrets
+    rev: 0.9.1
+    hooks:
+    -   id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: tests/.*
