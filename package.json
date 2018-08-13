@@ -26,7 +26,7 @@
     "enzyme-to-json": "^3.3.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^17.0.0",
-    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-prettier": "^3.0.0",
     "eslint-plugin-flowtype": "^2.43.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
