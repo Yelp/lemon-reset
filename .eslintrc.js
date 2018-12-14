@@ -15,6 +15,10 @@ module.exports = {
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
         'react/prop-types': 'off',
 
+        // we dynamically generate components at runtime, so these linters give false positives
+        'react/require-default-props': 'off',
+        'react/default-props-match-prop-types': 'off',
+
         // "type-annotations" isn't in the default options of 'react/sort-comp'.
         'react/sort-comp': [
             'error',

@@ -1,6 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Lemon passes a snapshot test 1`] = `
+exports[`lemon-reset commonjs passes a snapshot test 1`] = `
+<LemonReset
+  className=""
+  tag="div"
+  tagRef={null}
+>
+  ohai
+</LemonReset>
+`;
+
+exports[`lemon-reset es passes a snapshot test 1`] = `
+<LemonReset
+  className=""
+  tag="div"
+  tagRef={null}
+>
+  ohai
+</LemonReset>
+`;
+
+exports[`lemon-reset src passes a snapshot test 1`] = `
+<LemonReset
+  className=""
+  tag="div"
+  tagRef={null}
+>
+  ohai
+</LemonReset>
+`;
+
+exports[`lemon-reset umd passes a snapshot test 1`] = `
 <LemonReset
   className=""
   tag="div"

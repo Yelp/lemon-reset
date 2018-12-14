@@ -1,3 +1,4 @@
+dist/
 coverage/
 es/
 lib/
@@ -6,3 +7,4 @@ npm-debug.log
 venv/
 yarn.lock
 yarn-error.log
+*.css
