@@ -144,5 +144,14 @@ describe.each([['umd', LemonUMD], ['commonjs', LemonCommonJS], ['es', LemonES], 
             const wrapper = shallow(<Lemon.Div>ohai</Lemon.Div>);
             expect(wrapper).toMatchSnapshot();
         });
+
+        it('uses displayName in shallow render', () => {
+            const wrapper = shallow(
+                <div>
+                    <Lemon.Div>ohai</Lemon.Div>
+                </div>,
+            );
+            expect(wrapper).toMatchSnapshot();
+        });
     },
 );
