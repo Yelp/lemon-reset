@@ -10,6 +10,16 @@ exports[`lemon-reset commonjs passes a snapshot test 1`] = `
 </LemonReset>
 `;
 
+exports[`lemon-reset commonjs uses displayName in shallow render 1`] = `
+<div>
+  <Div
+    className=""
+  >
+    ohai
+  </Div>
+</div>
+`;
+
 exports[`lemon-reset es passes a snapshot test 1`] = `
 <LemonReset
   className=""
@@ -18,6 +28,16 @@ exports[`lemon-reset es passes a snapshot test 1`] = `
 >
   ohai
 </LemonReset>
+`;
+
+exports[`lemon-reset es uses displayName in shallow render 1`] = `
+<div>
+  <Div
+    className=""
+  >
+    ohai
+  </Div>
+</div>
 `;
 
 exports[`lemon-reset src passes a snapshot test 1`] = `
@@ -30,6 +50,16 @@ exports[`lemon-reset src passes a snapshot test 1`] = `
 </LemonReset>
 `;
 
+exports[`lemon-reset src uses displayName in shallow render 1`] = `
+<div>
+  <Div
+    className=""
+  >
+    ohai
+  </Div>
+</div>
+`;
+
 exports[`lemon-reset umd passes a snapshot test 1`] = `
 <LemonReset
   className=""
@@ -38,4 +68,14 @@ exports[`lemon-reset umd passes a snapshot test 1`] = `
 >
   ohai
 </LemonReset>
+`;
+
+exports[`lemon-reset umd uses displayName in shallow render 1`] = `
+<div>
+  <Div
+    className=""
+  >
+    ohai
+  </Div>
+</div>
 `;
