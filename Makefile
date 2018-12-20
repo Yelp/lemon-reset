@@ -2,15 +2,24 @@
 all: test
 
 .PHONY: build
-build: node_modules
+build: es lib dist
+
+es: node_modules src src/components/LemonReset/LemonReset.css
 	NODE_ENV=production yarn babel src --out-dir es
-	NODE_ENV=production yarn babel src --plugins=transform-es2015-modules-commonjs --out-dir lib
-	yarn flow-copy-source src lib
+	cp src/components/LemonReset/LemonReset.css es/components/LemonReset/
 	yarn flow-copy-source src es
-	./patch-meyer-reset.js
+
+lib: node_modules src src/components/LemonReset/LemonReset.css
+	NODE_ENV=production yarn babel src --plugins=transform-es2015-modules-commonjs --out-dir lib
+	cp src/components/LemonReset/LemonReset.css lib/components/LemonReset/
+	yarn flow-copy-source src lib
+
+dist: node_modules src src/components/LemonReset/LemonReset.css webpack.config.js
+	NODE_ENV=production yarn webpack --mode=production
+	cp src/components/LemonReset/LemonReset.js dist/lemon-reset.js.flow
 
 .PHONY: test
-test: venv node_modules
+test: build venv node_modules
 	venv/bin/pre-commit install -f --install-hooks
 	venv/bin/pre-commit run --all-files
 	yarn typecheck
@@ -21,13 +30,12 @@ venv: Makefile requirements-dev.txt
 	virtualenv venv --python=python3.6
 	venv/bin/pip install -r requirements-dev.txt
 
+src/components/LemonReset/LemonReset.css: node_modules patch-meyer-reset.js
+	./patch-meyer-reset.js
+
 node_modules: package.json
 	yarn
 
 .PHONY: clean
 clean:
-	rm -rf coverage
-	rm -rf lib
-	rm -rf es
-	rm -rf node_modules
-	rm -rf venv
+	git clean -fdX

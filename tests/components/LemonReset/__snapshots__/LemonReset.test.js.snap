@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Lemon passes a snapshot test 1`] = `
+exports[`lemon-reset commonjs passes a snapshot test 1`] = `
 <LemonReset
   className=""
   tag="div"
@@ -8,4 +8,74 @@ exports[`Lemon passes a snapshot test 1`] = `
 >
   ohai
 </LemonReset>
+`;
+
+exports[`lemon-reset commonjs uses displayName in shallow render 1`] = `
+<div>
+  <Div
+    className=""
+  >
+    ohai
+  </Div>
+</div>
+`;
+
+exports[`lemon-reset es passes a snapshot test 1`] = `
+<LemonReset
+  className=""
+  tag="div"
+  tagRef={null}
+>
+  ohai
+</LemonReset>
+`;
+
+exports[`lemon-reset es uses displayName in shallow render 1`] = `
+<div>
+  <Div
+    className=""
+  >
+    ohai
+  </Div>
+</div>
+`;
+
+exports[`lemon-reset src passes a snapshot test 1`] = `
+<LemonReset
+  className=""
+  tag="div"
+  tagRef={null}
+>
+  ohai
+</LemonReset>
+`;
+
+exports[`lemon-reset src uses displayName in shallow render 1`] = `
+<div>
+  <Div
+    className=""
+  >
+    ohai
+  </Div>
+</div>
+`;
+
+exports[`lemon-reset umd passes a snapshot test 1`] = `
+<LemonReset
+  className=""
+  tag="div"
+  tagRef={null}
+>
+  ohai
+</LemonReset>
+`;
+
+exports[`lemon-reset umd uses displayName in shallow render 1`] = `
+<div>
+  <Div
+    className=""
+  >
+    ohai
+  </Div>
+</div>
 `;
