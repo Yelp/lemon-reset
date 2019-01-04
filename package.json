@@ -15,7 +15,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.1.2",
     "babel-jest": "^22.2.2",
-    "babel-loader": "^7",
+    "babel-loader": "^8.0.5",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-react-app": "^3.0.1",
     "css-loader": "^2.0.1",
