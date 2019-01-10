@@ -4,18 +4,22 @@ all: test
 .PHONY: build
 build: es lib dist
 
+es: export NODE_ENV = production
+es: export BABEL_ENV = module
 es: node_modules src src/components/LemonReset/LemonReset.css
-	NODE_ENV=production yarn babel src --out-dir es
+	yarn babel src --out-dir es
 	cp src/components/LemonReset/LemonReset.css es/components/LemonReset/
 	yarn flow-copy-source src es
 
+lib: export NODE_ENV = production
 lib: node_modules src src/components/LemonReset/LemonReset.css
-	NODE_ENV=production yarn babel src --plugins=transform-es2015-modules-commonjs --out-dir lib
+	yarn babel src --out-dir lib
 	cp src/components/LemonReset/LemonReset.css lib/components/LemonReset/
 	yarn flow-copy-source src lib
 
+dist: export NODE_ENV = production
 dist: node_modules src src/components/LemonReset/LemonReset.css webpack.config.js
-	NODE_ENV=production yarn webpack --mode=production
+	yarn webpack --mode=production
 	cp src/components/LemonReset/LemonReset.js dist/lemon-reset.js.flow
 
 .PHONY: test
