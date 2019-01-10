@@ -86,14 +86,20 @@ type LemonResetType =
     | 'var'
     | 'video';
 
-type Props = {
-    tag: LemonResetType,
+type Props<T> = {
+    tag: T,
     children?: React.Node,
     className?: string,
-    tagRef?: ?React.Ref<*>,
+    tagRef?: ?React.Ref<T>,
 };
 
-export const LemonReset = ({ tag: Tag, children, className, tagRef, ...otherProps }: Props) => {
+export const LemonReset = <T: string & LemonResetType>({
+    tag: Tag,
+    children,
+    className,
+    tagRef,
+    ...otherProps
+}: Props<T>) => {
     let classes = styles[`lemon--${Tag}`];
     if (className != null && className !== '') {
         classes += ` ${className}`;
