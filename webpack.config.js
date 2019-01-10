@@ -9,6 +9,12 @@ module.exports = {
     output: {
         library: 'LemonReset',
         libraryTarget: 'umd',
+        /**
+         * This is a workaround to add NodeJS support to our UMD module. We can remove it
+         * once `target: "universal"` is actually supported:
+         *     https://github.com/webpack/webpack/issues/6525
+         */
+        globalObject: `(typeof self !== 'undefined' ? self : this)`,
     },
     externals: {
         react: {
