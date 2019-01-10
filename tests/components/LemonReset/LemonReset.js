@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { render, shallow } from 'enzyme';
 import * as LemonSrc from '../../../src';
