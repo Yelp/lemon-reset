@@ -47,7 +47,7 @@
     "reset-css": "^4.0.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.3.5"
   },
   "peerDependencies": {
     "react": "15.x || 16.x"
