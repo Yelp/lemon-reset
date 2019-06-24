@@ -33,7 +33,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-react": "^7.14.1",
     "flow-copy-source": "^2.0.2",
     "flow-bin": "^0.90.0",
     "flow-typed": "^2.5.1",
