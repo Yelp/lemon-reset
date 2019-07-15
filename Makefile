@@ -37,6 +37,7 @@ venv: Makefile requirements-dev.txt
 src/components/LemonReset/LemonReset.css: node_modules patch-meyer-reset.js
 	./patch-meyer-reset.js
 
+.PHONY: node_modules
 node_modules: package.json
 	yarn
 
