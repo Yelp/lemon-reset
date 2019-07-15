@@ -36,7 +36,7 @@
     "eslint-plugin-react": "^7.4.0",
     "flow-copy-source": "^2.0.2",
     "flow-bin": "^0.90.0",
-    "flow-typed": "^2.5.1",
+    "flow-typed": "^2.6.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.5.0",
