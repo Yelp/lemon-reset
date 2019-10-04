@@ -23,8 +23,14 @@ function doTest(Component, reps) {
 
 describe('speed', () => {
     it('goes fast', () => {
-        const oldSpeed = doTest(Div, 10);
+        // warmup
+        doTest(FastDiv, 10);
+        doTest(Div, 10);
+
+        // actually do the tests for realsies
         const newSpeed = doTest(FastDiv, 10);
+        const oldSpeed = doTest(Div, 10);
+
         console.log(`<Div />: ${oldSpeed}\n<FastDiv />: ${newSpeed}`);
     });
 });
