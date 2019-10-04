@@ -128,6 +128,30 @@ type NoChildTagProps = {
     className?: string,
 };
 
+export function exp_createTagComponent(Tag: LemonResetType, displayName: string) {
+    const component = <T: string & LemonResetType>({
+        children,
+        className,
+        tagRef,
+        ...otherProps
+    }: Props<T>) => {
+        let classes = styles[`lemon--${Tag}`];
+        if (className != null && className !== '') {
+            classes += ` ${className}`;
+        }
+        return (
+            <Tag className={classes} ref={tagRef} {...otherProps}>
+                {children}
+            </Tag>
+        );
+    };
+    component.defaultProps = {
+        className: '',
+    };
+    component.displayName = displayName;
+    return component;
+}
+
 function createTagComponent(tag: LemonResetType, displayName: string) {
     const component = (props: TagProps) => <LemonReset tag={tag} {...props} />;
     component.defaultProps = {
@@ -227,3 +251,5 @@ export const U = createTagComponent('u', 'U');
 export const Ul = createTagComponent('ul', 'Ul');
 export const Var = createTagComponent('var', 'Var');
 export const Video = createTagComponent('video', 'Video');
+
+export const FastDiv = exp_createTagComponent('div', 'Div');
