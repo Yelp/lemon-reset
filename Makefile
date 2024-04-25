@@ -31,7 +31,7 @@ test: build venv node_modules
 
 venv: Makefile requirements-dev.txt
 	rm -rf venv
-	virtualenv venv --python=python3.6
+	virtualenv venv --python=python3.10
 	venv/bin/pip install -r requirements-dev.txt
 
 src/components/LemonReset/LemonReset.css: node_modules patch-meyer-reset.js

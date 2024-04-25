@@ -1,7 +1,7 @@
 module.exports = {
-    extends: ['airbnb', 'plugin:flowtype/recommended', 'prettier', 'prettier/flowtype', 'prettier/react'],
+    extends: ['airbnb', 'plugin:flowtype/recommended', 'prettier'],
 
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
 
     plugins: ['flowtype', 'prettier'],
 
@@ -10,6 +10,8 @@ module.exports = {
 
         // https://github.com/airbnb/javascript/pull/985#issuecomment-239145468
         'react/jsx-filename-extension': 'off',
+
+        'react/jsx-props-no-spreading': 'off',
 
         // We use Flow in most of our projects so we don't really need prop-type validation.
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
