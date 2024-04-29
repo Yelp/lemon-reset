@@ -1,7 +1,6 @@
 # 🍋 Lemon Reset
 
 [![npm](https://img.shields.io/npm/v/lemon-reset.svg)](https://yarn.pm/lemon-reset)
-[![Build Status](https://travis-ci.org/Yelp/lemon-reset.svg?branch=master)](https://travis-ci.org/Yelp/lemon-reset)
 [![gzip size](http://img.badgesize.io/https://unpkg.com/lemon-reset/dist/lemon-reset.js?compression=gzip)](https://unpkg.com/lemon-reset/dist/lemon-reset.js)
 [![install size](https://packagephobia.now.sh/badge?p=lemon-reset)](https://packagephobia.now.sh/result?p=lemon-reset)
 
@@ -51,7 +50,7 @@ export default Container;
 Pass in any props! If you need to [pass in a ref](https://reactjs.org/docs/refs-and-the-dom.html#adding-a-ref-to-a-dom-element), you'll need to pass it in as a tagRef:
 
 ```javascript
-<Span tagRef={span => console.log(span)}>This has a ref</Span>
+<Span tagRef={(span) => console.log(span)}>This has a ref</Span>
 ```
 
 ## Build

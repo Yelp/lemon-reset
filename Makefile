@@ -38,7 +38,7 @@ src/components/LemonReset/LemonReset.css: node_modules patch-meyer-reset.js
 	./patch-meyer-reset.js
 
 node_modules: package.json
-	yarn
+	yarn install
 
 .PHONY: clean
 clean:
