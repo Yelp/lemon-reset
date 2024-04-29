@@ -1,7 +1,7 @@
 # 🍋 Lemon Reset
 
 [![npm](https://img.shields.io/npm/v/lemon-reset.svg)](https://yarn.pm/lemon-reset)
-[![gzip size](http://img.badgesize.io/https://unpkg.com/lemon-reset/dist/lemon-reset.js?compression=gzip)](https://unpkg.com/lemon-reset/dist/lemon-reset.js)
+[![gzip size](https://badges.herokuapp.com/size/npm/lemon-reset/dist/lemon-reset.js?gzip=true)](https://unpkg.com/lemon-reset/dist/lemon-reset.js)
 [![install size](https://packagephobia.now.sh/badge?p=lemon-reset)](https://packagephobia.now.sh/result?p=lemon-reset)
 
 A set of React components that provide [Meyer Reset](https://meyerweb.com/eric/tools/css/reset/) styles for use with [CSS Modules](https://github.com/css-modules/css-modules).
