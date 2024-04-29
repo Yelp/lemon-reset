@@ -95,9 +95,9 @@ type Props<T> = {
 
 export function LemonReset<T: string & LemonResetType>({
     tag: Tag,
-    children = null,
+    children,
     className = '',
-    tagRef = null,
+    tagRef,
     ...otherProps
 }: Props<T>) {
     let classes = styles[`lemon--${Tag}`];
@@ -131,10 +131,8 @@ function createTagComponent(tag: LemonResetType, displayName: string) {
 }
 
 function createNoChildTagComponent(tag: LemonResetType, displayName: string) {
-    const component = ({ children = null, className = '', ...otherProps }: NoChildTagProps) => (
-        <LemonReset tag={tag} className={className} {...otherProps}>
-            {children}
-        </LemonReset>
+    const component = ({ className = '', ...otherProps }: NoChildTagProps) => (
+        <LemonReset tag={tag} className={className} {...otherProps} />
     );
     component.displayName = displayName;
     return component;
