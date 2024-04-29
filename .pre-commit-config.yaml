@@ -1,31 +1,31 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    sha: v1.2.0
-    hooks:
-    -   id: trailing-whitespace
-    -   id: end-of-file-fixer
-    -   id: check-added-large-files
-    -   id: check-json
-    -   id: check-yaml
--   repo: https://github.com/prettier/prettier
-    sha: 1.10.2
-    hooks:
-    -   id: prettier
-        name: prettier
-        # Prettier runs on JavaScript as part of eslint
-        exclude_types: [javascript]
-        exclude: ^package\.json
--   repo: local
-    hooks:
-    -   id: eslint
-        name: eslint
-        entry: yarn eslint
-        language: system
-        files: \.js$
-        args: ['--fix', '--ignore-pattern=!.eslintrc.js']
--   repo: https://github.com/Yelp/detect-secrets
-    rev: 0.9.1
-    hooks:
-    -   id: detect-secrets
-        args: ['--baseline', '.secrets.baseline']
-        exclude: tests/.*
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v1.2.0
+      hooks:
+          - id: trailing-whitespace
+          - id: end-of-file-fixer
+          - id: check-added-large-files
+          - id: check-json
+          - id: check-yaml
+    - repo: https://github.com/pre-commit/mirrors-prettier
+      rev: v3.1.0
+      hooks:
+          - id: prettier
+            name: prettier
+            # Prettier runs on JavaScript as part of eslint
+            exclude_types: [javascript]
+            exclude: ^package\.json
+    - repo: local
+      hooks:
+          - id: eslint
+            name: eslint
+            entry: yarn eslint
+            language: system
+            files: \.js$
+            args: ['--fix', '--ignore-pattern=!.eslintrc.js']
+    - repo: https://github.com/Yelp/detect-secrets
+      rev: 0.9.1
+      hooks:
+          - id: detect-secrets
+            args: ['--baseline', '.secrets.baseline']
+            exclude: tests/.*

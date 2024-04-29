@@ -1,10 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`lemon-reset commonjs has an empty default classname when used directly 1`] = `
+<div
+  className="lemon--div"
+>
+  ohai
+</div>
+`;
+
 exports[`lemon-reset commonjs passes a snapshot test 1`] = `
 <LemonReset
   className=""
   tag="div"
-  tagRef={null}
 >
   ohai
 </LemonReset>
@@ -12,11 +19,17 @@ exports[`lemon-reset commonjs passes a snapshot test 1`] = `
 
 exports[`lemon-reset commonjs uses displayName in shallow render 1`] = `
 <div>
-  <Div
-    className=""
-  >
+  <Div>
     ohai
   </Div>
+</div>
+`;
+
+exports[`lemon-reset es has an empty default classname when used directly 1`] = `
+<div
+  className="lemon--div"
+>
+  ohai
 </div>
 `;
 
@@ -24,7 +37,6 @@ exports[`lemon-reset es passes a snapshot test 1`] = `
 <LemonReset
   className=""
   tag="div"
-  tagRef={null}
 >
   ohai
 </LemonReset>
@@ -32,11 +44,17 @@ exports[`lemon-reset es passes a snapshot test 1`] = `
 
 exports[`lemon-reset es uses displayName in shallow render 1`] = `
 <div>
-  <Div
-    className=""
-  >
+  <Div>
     ohai
   </Div>
+</div>
+`;
+
+exports[`lemon-reset src has an empty default classname when used directly 1`] = `
+<div
+  className="lemon--div"
+>
+  ohai
 </div>
 `;
 
@@ -44,7 +62,6 @@ exports[`lemon-reset src passes a snapshot test 1`] = `
 <LemonReset
   className=""
   tag="div"
-  tagRef={null}
 >
   ohai
 </LemonReset>
@@ -52,11 +69,17 @@ exports[`lemon-reset src passes a snapshot test 1`] = `
 
 exports[`lemon-reset src uses displayName in shallow render 1`] = `
 <div>
-  <Div
-    className=""
-  >
+  <Div>
     ohai
   </Div>
+</div>
+`;
+
+exports[`lemon-reset umd has an empty default classname when used directly 1`] = `
+<div
+  className="lemon--div--1-oIF"
+>
+  ohai
 </div>
 `;
 
@@ -64,7 +87,6 @@ exports[`lemon-reset umd passes a snapshot test 1`] = `
 <LemonReset
   className=""
   tag="div"
-  tagRef={null}
 >
   ohai
 </LemonReset>
@@ -72,9 +94,7 @@ exports[`lemon-reset umd passes a snapshot test 1`] = `
 
 exports[`lemon-reset umd uses displayName in shallow render 1`] = `
 <div>
-  <Div
-    className=""
-  >
+  <Div>
     ohai
   </Div>
 </div>

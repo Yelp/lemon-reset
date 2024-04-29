@@ -93,13 +93,13 @@ type Props<T> = {
     tagRef?: ?React.Ref<T>,
 };
 
-export const LemonReset = <T: string & LemonResetType>({
+export function LemonReset<T: string & LemonResetType>({
     tag: Tag,
     children,
-    className,
+    className = '',
     tagRef,
     ...otherProps
-}: Props<T>) => {
+}: Props<T>) {
     let classes = styles[`lemon--${Tag}`];
     if (className != null && className !== '') {
         classes += ` ${className}`;
@@ -109,15 +109,9 @@ export const LemonReset = <T: string & LemonResetType>({
             {children}
         </Tag>
     );
-};
+}
 
 LemonReset.displayName = 'LemonReset';
-
-LemonReset.defaultProps = {
-    children: null,
-    className: '',
-    tagRef: null,
-};
 
 type TagProps = {
     children?: React.Node,
@@ -129,20 +123,17 @@ type NoChildTagProps = {
 };
 
 function createTagComponent(tag: LemonResetType, displayName: string) {
-    const component = (props: TagProps) => <LemonReset tag={tag} {...props} />;
-    component.defaultProps = {
-        className: '',
-    };
+    const component = ({ className = '', ...otherProps }: TagProps) => (
+        <LemonReset tag={tag} className={className} {...otherProps} />
+    );
     component.displayName = displayName;
     return component;
 }
 
 function createNoChildTagComponent(tag: LemonResetType, displayName: string) {
-    const component = (props: NoChildTagProps) => <LemonReset tag={tag} {...props} />;
-    component.defaultProps = {
-        children: null,
-        className: '',
-    };
+    const component = ({ className = '', ...otherProps }: NoChildTagProps) => (
+        <LemonReset tag={tag} className={className} {...otherProps} />
+    );
     component.displayName = displayName;
     return component;
 }
