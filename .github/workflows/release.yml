@@ -4,6 +4,9 @@ on:
     release:
         types: [created]
 
+permissions:
+    id-token: write  # required for publishing
+
 jobs:
     test:
         runs-on: ubuntu-20.04
@@ -27,7 +30,6 @@ jobs:
               with:
                   node-version: '16.x'
                   registry-url: https://registry.npmjs.org/
+            - run: npm install -g yarn@latest
             - run: yarn
             - run: yarn publish
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
