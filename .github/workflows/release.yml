@@ -4,9 +4,6 @@ on:
     release:
         types: [created]
 
-permissions:
-    id-token: write  # required for publishing
-
 jobs:
     test:
         runs-on: ubuntu-20.04
@@ -24,6 +21,8 @@ jobs:
     publish-npm:
         needs: test
         runs-on: ubuntu-20.04
+        permissions:
+            id-token: write  # required for publishing
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
